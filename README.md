@@ -1,7 +1,7 @@
 # robin-educational-website
 Educational Website using sql.
 
-Educational Website
+```Educational Website```
 
 Creating an educational website which shall be having javascript content. You will be able to access many resources from this space. There are two ways to access the content either you register yourself or become a guest reader. The registration comes with its own benefits namely, you can become an author who will have the access to write content as we all know the technology keeps updating frequently as we are living in the era of developing technology.
 You register yourself and you can drop constructive comments on the content for others, you can in a way become a mentor for people who are new to the technology. You can update the content which is present on the website, add your own work if need be and do lots more.

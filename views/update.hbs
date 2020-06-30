@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Update</h2>
+                <hr>
+                {{#if error}}
+                    {{#if msg}}
+                        <div class="alert alert-danger">
+                            {{msg}}
+                        </div>
+                    {{/if}}
+                {{/if}}  
+                <form action="/users/update" method="POST">
+                    <label for="Name">
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Change Your Name">
+                    </label>
+                    <p></p>
+                    <label for="Email id">
+                        <input class="form-control" type="text" name="email" id="email" placeholder="Change Email">
+                    </label>
+                    <p></p>
+                    <label for="password">
+                        <input class="form-control" type="password" name="password" id="password" placeholder="Change Password">
+                    </label>
+                    <p></p>
+                    <p></p>
+                    <label for="oldPassword">
+                        <input class="form-control" type="password" name="oldPassword" id="oldPassword" placeholder="Current Password">
+                    </label>
+                    <p></p>
+                    <button class="btn btn-info" type="submit">update</button>
+                </form>
+                <p></p>
+                <form action="/upload" method="GET">
+                    <button class="btn btn-info" type="submit">change profile photo</button>
+                </form>
+                <p></p>
+                <form action="/users/home" method="GET">
+                    <button class="btn btn-info" type="submit">Home Page</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

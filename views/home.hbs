@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Authentication</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Educational Website</h2>
+                <hr>
+                <form action="/search" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <label for="word">
+                                <input class="form-control" type="text" name="word" id="word" placeholder="Enter Topic/Blog Name">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary btn-sm" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form> 
+                <p></p>
+                <div class="row">
+                    <div class="col-6">
+                        <form action="/login" method="GET">
+                            <p></p>
+                            <button class="btn btn-outline-primary" type="submit">Login</button>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="/google" method="GET">
+                            <p></p>
+                            <button class="btn btn-outline-secondary" type="submit">connect with google</button>
+                        </form>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <form action="/signin" method="GET">
+                            <button class="btn btn-outline-primary" type="submit">Register</button>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="/faqs/show" method="GET">
+                            <button class="btn btn-outline-secondary" type="submit">FAQs</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

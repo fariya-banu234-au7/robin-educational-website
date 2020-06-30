@@ -1,0 +1,39 @@
+{
+  "name": "eduweb",
+  "version": "1.0.0",
+  "description": "\"Educational Website\"",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start:prod": "SET NODE_ENV=production & node server",
+    "start:dev": "nodemon server"
+  },
+  "author": "FARIYA BANU",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cloudinary": "^1.22.0",
+    "datauri": "^3.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.5.0",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.9.18",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.8",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "randomstring": "^1.1.5",
+    "sequelize": "^6.2.3"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

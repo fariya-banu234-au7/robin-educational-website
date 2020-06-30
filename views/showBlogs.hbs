@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BLOGs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <hr>
+                <h2>BLOGs</h2>
+                {{#if error}}
+                <div class="alert alert-danger">
+                    {{msg}}
+                </div>
+                {{/if}}
+                {{#if blogs}}
+                    <ul class="list-group list-group-flush">
+                        {{#each blogs}}
+                            <li class="list-group-item">
+                                <h5><b>{{this.title}}</b></h5>
+                                <p>{{this.body}}</p>
+                                <p>tag: {{this.tag}}</p>
+                                {{#if ../self}}
+                                    <div class="row">
+                                        <div class="col">
+                                            <form action="/blogs/edit/{{this._id}}" method="GET">
+                                                <button class="btn btn-warning" type="submit">Edit</button>
+                                            </form> 
+                                        </div>
+                                        <div class="col">
+                                            <form action="/blogs/delete/{{this._id}}" method="GET">
+                                                <button class="btn btn-danger" type="submit">delete</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                {{/if}}
+                                {{#if ../admin}}
+                                    <div class="row">
+                                        <div class="col">
+                                            <form action="/blogs/adminDelete/{{this._id}}" method="GET">
+                                                <button class="btn btn-danger" type="submit">delete</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </div>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        {{#if self}}
+        <div class="offset-md-4 col-md-4">
+            <div class="row">
+                <div class="col">
+                    <form action="/blogs/new" method="GET">
+                        <button class="btn btn-info" type="submit">New BLOG</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</body>
+</html>

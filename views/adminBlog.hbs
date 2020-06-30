@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Educational Website</h2>
+                <h4><b>{{blog.title}}</b></h4>
+                <h6>By- {{blog.createdBy.name}}</h6>
+                <p></p>
+                <p>{{blog.body}}</p>
+                <p></p>
+                <p></p>
+                <h4>Report</h4>
+                <p><b>It is copied</b> - {{report/It_is_copied}}</p>
+                <p><b>It is unappropriate</b>-{{report/It_is_unappropriate}}</p>
+                <p><b>Threats of violence and incitement.</b>-{{report/Threats_of_violence_and_incitement}}</p>
+                <p><b>Hate Speech</b>-{{report/Hate_Speech}}</p>
+                <p><b>Harassment</b>-{{report/Harassment}}</p>
+                <p><b>Ads, Promotion, and Marketing</b>-{{report/Ads_Promotion_and_Marketing}}</p>
+            </div>
+            {{#if admin}}
+                <div class="row">
+                    <div class="col">
+                        <form action="/blogs/adminDelete/{{blog._id}}" method="GET">
+                            <p></p>
+                            <button class="btn btn-outline-danger" type="submit">Delete This Blog</button>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form action="/admins/remove-reports/{{blog._id}}" method="GET">
+                            <p></p>
+                            <button class="btn btn-outline-warning" type="submit">Remove Reports</button>
+                        </form>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</body>
+</html>

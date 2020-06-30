@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Authentication</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Educational Website</h2>
+                <p></p>
+                <p></p>
+                <hr>
+                <h4>Choose reason of report</h4>
+                <form action="/blogs/report/{{id}}" method="POST">
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="report" id="report1" value="1" checked>
+                    <label class="form-check-label" for="report1">
+                        It is copied
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="report" id="report2" value="2">
+                    <label class="form-check-label" for="report2">
+                        It is unappropriate
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="report" id="report2" value="3">
+                    <label class="form-check-label" for="report2">
+                        Threats of violence and incitement.
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="report" id="report2" value="4">
+                    <label class="form-check-label" for="report2">
+                        Hate Speech
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="report" id="report2" value="5">
+                    <label class="form-check-label" for="report2">
+                        Harassment
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="report" id="report2" value="6">
+                    <label class="form-check-label" for="report2">
+                        Ads, Promotion, and Marketing
+                    </label>
+                    </div>
+                    <p></p>
+                    <button class="btn btn-outline-danger" type="submit">Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

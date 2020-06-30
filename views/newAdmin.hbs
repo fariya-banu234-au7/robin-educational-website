@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>User Profile</h2>
+                <p></p>
+                <h3>Hello {{user.name}}</h3>
+                <hr>
+                <div class="alert alert-danger">
+                    The following user is the admin now.
+                </div>
+                {{#with user}}
+                <p>Name - {{name}}</p>
+                <p>Email ID - {{email}}</p>
+                {{/with}}
+                <p></p>
+                <p></p>
+                <form action="/users/home" method="GET">
+                    <p></p>
+                    <button class="btn btn-info" type="submit">Home Page</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

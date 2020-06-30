@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ask Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Ask Me</h2>
+                <hr>
+                {{#if error}}
+                <div class="alert alert-danger">
+                    {{msg}}
+                </div>
+                {{/if}}
+                <form action="/askMe/askQuestion/{{user}}" method="POST">
+                    <label for="email">
+                        <input class="form-control" type="text" name="question" id="question" placeholder="Ask Question" required>
+                    </label>
+                    <p></p>
+                    <button class="btn btn-info" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                {{#if questions}}
+                    <h4><b>Your Previous Questions</b></h4>
+                    <ul class="list">
+                        {{#each questions}}
+                            <li>
+                                <h4><b>{{this.question}}</b></h4>
+                                <p>created on {{this.createdAt}}</p>
+                                {{#if this.solved}}
+                                    <h4>{{this.answer}}</h4>
+                                {{else}}
+                                    <h4>Question not solved yet.</h4>
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
